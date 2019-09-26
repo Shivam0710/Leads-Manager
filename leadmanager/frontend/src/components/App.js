@@ -5,6 +5,8 @@ import Dashboard from './leads/Dashboard';
 
 import store from '../store';
 import { Provider } from 'react-redux';
+
+import Alert from './layouts/Alert'
 class App extends Component {
 
 	render() {
@@ -13,6 +15,7 @@ class App extends Component {
 			<Provider store={store}>
 				<Fragment>
 					<Header />
+					<Alert />
 					<div className="container">
 						<Dashboard />
 					</div>
