@@ -30,11 +30,18 @@ class Alert extends Component {
 			if(errors.msg.message) {
 				alert("message: "+errors.msg.message.join())
 			}
+			if(errors.msg.non_field_errors) {
+				alert(errors.msg.non_field_errors.join())
+			}
+			if(errors.msg.username) {
+				alert(errors.msg.username.join())
+			}
 		}
 
 		if(message != prevProps.message) {
 			if(message.leadAdded) this.showAlert(message.leadAdded)
 			if(message.leadDeleted) this.showAlert(message.leadDeleted)
+			if(message.passwordNotMatch) this.showAlert(message.passwordNotMatch)
 		}
 	}
 

@@ -14,7 +14,7 @@ class Leads extends Component {
 	}
 
 	render() {
-		console.log(this.props.leads);
+
 		return (
 			<Fragment>
 				<h2> Leads </h2>
